@@ -1,0 +1,29 @@
+hub:
+  # output of first execution of 'openssl rand -hex 32'
+  cookieSecret: "ee7592fd560994eed1954460b95147a96a9f13ef2feea95584a495b013a5fc40"
+proxy:
+  # output of second execution of 'openssl rand -hex 32'
+  secretToken: "a25c86f711e43cadf0fb569b1ed8e49775bc4986ac119111719927f9c5add212"
+
+
+#singleuser:
+#  storage:
+#    type: none
+#  image:
+#    name: aleith/cobre-docker
+#    tag: latest
+
+admin:
+  users:
+    # CIS admins
+    - 'aleith'
+    - 'ashok'
+
+singleuser:
+  image:
+     name: aleith/repo-docker
+     tag: v0.1
+
+auth:
+  dummy:
+    password: cobre
